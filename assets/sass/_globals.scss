@@ -1,0 +1,80 @@
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: inherit; font-weight: inherit !important; }
+
+html { font-size: 62.5%; overflow-x: hidden; letter-spacing: -.2px; }
+
+body { font-family: 'Open Sans', sans-serif; box-sizing: border-box; font-weight: 400 !important; background-color: #f0f9fb; }
+
+a{ text-decoration: none !important; }
+
+.h1-heading{ font-size: 5rem; line-height: 6rem; font-weight: 600 !important; 
+  @media (max-width: 767.98px) {
+    font-size: 4.6rem; line-height: 5.5rem;
+  }
+}
+.light{ color: $text-color-white; }
+
+.h2-heading{ font-size: 5rem; line-height: 6rem; font-weight: 600 !important; 
+  @media (max-width: 767.98px) {
+    font-size: 4rem; line-height: 5rem;
+  }
+  @media (max-width: 575.98px) {
+    font-size: 3.5rem; line-height: 4rem;
+  }
+}
+.dark{ color: $text-color-dark; }
+
+.h3-heading{ font-size: 2.4rem; line-height: 3.4rem; }
+
+.paragraph{ font-size: 2rem; line-height: 3.4rem; 
+  &.small{ font-size: 1.6rem; line-height: 2.6rem; }
+}
+
+.download-button{ width: 100%; height: 7.4rem; background-color: white; display: flex; align-items: center; padding: 0 2rem;
+  border-radius: .5rem;
+  @include animateIt;
+  &:hover{ -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2); -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2); transform: translateY(-1rem); }
+  
+  &__wrapper{ width: 100%; display: inline-block; }
+  &--info{ font-size: 1.3rem; color: #60748e; margin-left: 3.2rem; position: relative; font-weight: 600 !important;
+    &::before{ content: ""; display: block; position: absolute; width: .1rem; height: 3.4rem; background-color: #d4e2ea;
+      left: -1.6rem; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%);
+    }
+    span{ display: block; font-size: 2.4rem; color: #223461; margin-top: -.6rem; font-weight: 700 !important; } 
+  }
+  &__inner{ width: 26.6rem; display: block; margin-top: 5rem;
+    .descript{ font-size: 1.4rem; color: white; display: block; text-align: center; width: 100%; margin-top: 1.7rem; 
+      font-weight: 500 !important; font-weight: 600 !important;
+      @include textHover(white, 5rem);
+    }
+  }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: 991.98px) {
+      &:not(:first-child):not(:last-child) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      &:first-child {
+        padding-right: 1.5rem;
+      }
+
+      &:last-child {
+        padding-left: 1.5rem;
+      }
+    }
+
+  }
+}
